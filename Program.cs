@@ -20,12 +20,17 @@ namespace GuessingGame
                 {
                     numGuesses = 6;
                 }
-                else
+                else if (difficultyLevel == "Hard")
                 {
                     numGuesses = 4;
                 }
+                else
+                {
+                    Console.WriteLine("Please enter one of the choices");
+                    
+                }
             for (int i = 0; i < numGuesses; i++)
-            {     
+                {     
                 string guess = Console.ReadLine();
                 int intGuess = int.Parse(guess);
                 Console.Write($"Your guess ({ numGuesses - i })>");
